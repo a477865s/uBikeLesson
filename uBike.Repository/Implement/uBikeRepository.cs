@@ -15,6 +15,7 @@ namespace uBike.Repository.Implement
     {
 
         private Uri DataSource => new Uri("https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json");
+        //使用HttpClient工廠 
         //private IHttpClientFactory _httpClientFactory;
         //public uBikeRepository(IHttpClientFactory client)
         //{
