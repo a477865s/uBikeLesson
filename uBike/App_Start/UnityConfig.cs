@@ -51,18 +51,18 @@ namespace uBike
             //var service = new ServiceCollection();
             //ConfigureServices(service);
             
-            
+            //Repository註冊
             container.RegisterType<IuBikeRepository, uBikeRepository>();
+
+            //Service註冊
             container.RegisterType<IuBikeService, uBikeService>();
 
+            //AutoMapper註冊
             var config = new MapperConfiguration(x =>x.AddProfile(new MappingProfile()));
             container.RegisterInstance<IMapper>(config.CreateMapper());
 
+            //做到一半的IHttpClientFactory
             //container.RegisterType<IHttpClientFactory>();
-
-
-
-
         }
 
         //private static void ConfigureServices(ServiceCollection services)
